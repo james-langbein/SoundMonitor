@@ -9,7 +9,7 @@ from collections import deque
 CHUNK = 1024
 WIDTH = 2
 FORMAT = pyaudio.paInt16
-CHANNELS = 2
+CHANNELS = 1
 RATE = 44100
 DEVICE_ID = 1
 
@@ -40,7 +40,7 @@ def run():
         # clear the last frame and draw the next frame
         ax.clear()
         ax.plot(data)
-        ax.plot(session_max[-graph_length:], color='red')
+        # ax.plot(session_max[-graph_length:], color='red')
         # ax.plot(session_min[-graph_length:], color='green')
         # Format plot
         min_y, max_y = min(_rms_values), max(_rms_values)
@@ -54,7 +54,7 @@ def run():
     # init list for data stream
     # fill with zeros so that graph x-axis is correct length when first shown
     rms_stream = [0 for i in range(graph_length)]
-    session_max = [0 for i in range(graph_length)]
+    # session_max = [0 for i in range(graph_length)]
     # session_min = [0 for i in range(graph_length)]
 
     # init list for last 10 rms values, these will be used to get average of last 25 readings (250 ms)
