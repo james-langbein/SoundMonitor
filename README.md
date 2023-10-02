@@ -13,7 +13,7 @@ along these lines if you want to use this program in the same way.
 Running `latest_live_microphone_levels.py` will present the GUI below, which tracks the volume coming from the chosen 
 microphone, much like an earthquake monitor.
 
-(screenshot)
+(screenshot to come)
 
 This has been designed for putting onto a secondary PC monitor, so that I can work on my primary monitor, and my peripheral
 vision picks up any sudden spikes in the graph.
